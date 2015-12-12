@@ -17,14 +17,17 @@ Rails.application.routes.draw do
   root to: "welcome#index"
 
   # get "/users", to: "users#index", as: "users"
+  # get "/signup", to: "users#new", as: "signup"
   get "/users/new", to: "users#new", as: "new_user"
   post "users", to: "users#create"
   get "users/:id", to: "users#show"
   get "users/edit/:id", to: "users#edit", as: "edit_user"
   patch "users/edit/:id", to: "users#update"
+  # delete "/users/edit/:id", to: "users#destroy"
 
   get "/sign_in", to: "sessions#new"
   post "/sessions", to: "sessions#create"
+  # delete "/sessions/:id", to: "sessions#destroy", as: "logout"
 
   get "/restaurants", to: "restaurants#index"
   get "/restaurants/new", to: "restaurants#new", as: "new_restaurant"
@@ -32,6 +35,7 @@ Rails.application.routes.draw do
   get "restaurants/:id", to: "restaurants#show"
   get "restaurants/edit/:id", to: "restaurants#edit", as: "edit_restaurant"
   patch "restaurants/edit/:id", to: "restaurants#update"
+  # delete "/restaurants/edit/:id", to: "restaurants#destroy"
 
   get "/dishes", to: "dishes#index"
   get "/dishes/new", to: "dishes#new", as: "new_dish"
@@ -39,4 +43,5 @@ Rails.application.routes.draw do
   get "dishes/:id", to: "dishes#show"
   get "dishes/edit/:id", to: "dishes#edit", as: "edit_dish"
   patch "dishes/edit/:id", to: "dishes#update"
+  # delete "/dishes/edit/:id", to: "dishes#destroy"
 end
