@@ -16,32 +16,40 @@ Rails.application.routes.draw do
 
   root to: "welcome#index"
 
-  # get "/users", to: "users#index", as: "users"
-  # get "/signup", to: "users#new", as: "signup"
-  get "/users/new", to: "users#new", as: "new_user"
-  post "users", to: "users#create"
-  get "users/:id", to: "users#show"
-  get "users/edit/:id", to: "users#edit", as: "edit_user"
-  patch "users/edit/:id", to: "users#update"
-  # delete "/users/edit/:id", to: "users#destroy"
-
   get "/sign_in", to: "sessions#new"
   post "/sessions", to: "sessions#create"
-  # delete "/sessions/:id", to: "sessions#destroy", as: "logout"
+  delete "/sessions/:id", to: "sessions#destroy", as: "logout"
 
-  get "/restaurants", to: "restaurants#index"
-  get "/restaurants/new", to: "restaurants#new", as: "new_restaurant"
-  post "/restaurants", to: "restaurants#create"
-  get "restaurants/:id", to: "restaurants#show"
-  get "restaurants/edit/:id", to: "restaurants#edit", as: "edit_restaurant"
-  patch "restaurants/edit/:id", to: "restaurants#update"
-  # delete "/restaurants/edit/:id", to: "restaurants#destroy"
+  resources :users do
+    resources :restaurants do
+      resources :dishes
+    end
+  end
 
-  get "/dishes", to: "dishes#index"
-  get "/dishes/new", to: "dishes#new", as: "new_dish"
-  post "/dishes", to: "dishes#create"
-  get "dishes/:id", to: "dishes#show"
-  get "dishes/edit/:id", to: "dishes#edit", as: "edit_dish"
-  patch "dishes/edit/:id", to: "dishes#update"
-  # delete "/dishes/edit/:id", to: "dishes#destroy"
 end
+
+#                      root GET    /                                                                    welcome#index
+#    user_restaurant_dishes GET    /users/:user_id/restaurants/:restaurant_id/dishes(.:format)          dishes#index
+#                           POST   /users/:user_id/restaurants/:restaurant_id/dishes(.:format)          dishes#create
+#  new_user_restaurant_dish GET    /users/:user_id/restaurants/:restaurant_id/dishes/new(.:format)      dishes#new
+# edit_user_restaurant_dish GET    /users/:user_id/restaurants/:restaurant_id/dishes/:id/edit(.:format) dishes#edit
+#      user_restaurant_dish GET    /users/:user_id/restaurants/:restaurant_id/dishes/:id(.:format)      dishes#show
+#                           PATCH  /users/:user_id/restaurants/:restaurant_id/dishes/:id(.:format)      dishes#update
+#                           PUT    /users/:user_id/restaurants/:restaurant_id/dishes/:id(.:format)      dishes#update
+#                           DELETE /users/:user_id/restaurants/:restaurant_id/dishes/:id(.:format)      dishes#destroy
+#          user_restaurants GET    /users/:user_id/restaurants(.:format)                                restaurants#index
+#                           POST   /users/:user_id/restaurants(.:format)                                restaurants#create
+#       new_user_restaurant GET    /users/:user_id/restaurants/new(.:format)                            restaurants#new
+#      edit_user_restaurant GET    /users/:user_id/restaurants/:id/edit(.:format)                       restaurants#edit
+#           user_restaurant GET    /users/:user_id/restaurants/:id(.:format)                            restaurants#show
+#                           PATCH  /users/:user_id/restaurants/:id(.:format)                            restaurants#update
+#                           PUT    /users/:user_id/restaurants/:id(.:format)                            restaurants#update
+#                           DELETE /users/:user_id/restaurants/:id(.:format)                            restaurants#destroy
+#                     users GET    /users(.:format)                                                     users#index
+#                           POST   /users(.:format)                                                     users#create
+#                  new_user GET    /users/new(.:format)                                                 users#new
+#                 edit_user GET    /users/:id/edit(.:format)                                            users#edit
+#                      user GET    /users/:id(.:format)                                                 users#show
+#                           PATCH  /users/:id(.:format)                                                 users#update
+#                           PUT    /users/:id(.:format)                                                 users#update
+#                           DELETE /users/:id(.:format)                                                 users#destroy
