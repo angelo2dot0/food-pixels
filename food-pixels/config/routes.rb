@@ -2,18 +2,6 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
-
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
-
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
   root to: "welcome#index"
 
   get "/sign_in", to: "sessions#new"
@@ -28,7 +16,11 @@ Rails.application.routes.draw do
 
 end
 
+#                    Prefix Verb   URI Pattern                                                          Controller#Action
 #                      root GET    /                                                                    welcome#index
+#                   sign_in GET    /sign_in(.:format)                                                   sessions#new
+#                  sessions POST   /sessions(.:format)                                                  sessions#create
+#                    logout DELETE /sessions/:id(.:format)                                              sessions#destroy
 #    user_restaurant_dishes GET    /users/:user_id/restaurants/:restaurant_id/dishes(.:format)          dishes#index
 #                           POST   /users/:user_id/restaurants/:restaurant_id/dishes(.:format)          dishes#create
 #  new_user_restaurant_dish GET    /users/:user_id/restaurants/:restaurant_id/dishes/new(.:format)      dishes#new
