@@ -1,0 +1,17 @@
+Add New Restaurant Form
+
+<%= form_for @restaurant, url: restaurants_path, method: "post" do |f| %>
+  <div>
+    <%= f.text_field :restaurant_name, placeholder: "Restaurant Name" %>
+  </div>
+  <div>
+    <%= f.text_field :restaurant_address, placeholder: "Restaurant Address" %>
+  </div>
+  <div>
+    <%= f.text_field :restaurant_phone, placeholder: "Restaurant Phone" %>
+  </div>
+  <div>
+    <%= f.text_field :restaurant_website, placeholder: "Restaurant Website" %>
+  </div>
+  <%= f.submit "Add New Restaurant" %>
+<% end %>

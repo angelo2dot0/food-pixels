@@ -1,0 +1,11 @@
+<h1>Welcome to Restaurants Index.</h1>
+
+<div>
+There are currently <%= @restaurants.length %> restaurants in total.
+</div>
+
+<div>
+These are the restaurants: <% @restaurants.each do |restaurant|  %>
+<%= link_to restaurant.restaurant_name, restaurant_path(restaurant)  %>
+<%end%>
+</div>
