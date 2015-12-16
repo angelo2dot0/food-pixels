@@ -1,0 +1,43 @@
+<h1>Welcome to Restaurant Show Page.</h1>
+
+This is the show page for a single restaurant, that belongs to a single user (restaurant manager).
+
+<br>
+<br>
+<%= @restaurant.restaurant_name %>
+<br>
+<%= @restaurant.restaurant_address %>
+<br>
+<%= @restaurant.restaurant_phone %>
+<br>
+<%= @restaurant.restaurant_website %>
+<br>
+<br>
+
+<div>
+These are the dishes: 
+
+<% @restaurant.dishes.each_slice(3) do |three_dishes|  %>
+
+    <div class="row">
+    	<% three_dishes.each do |dish| %>
+        	<div class="col-md-3">
+        	 	<img src="<%= dish.dish_photo %>" style="width:200px" alt=""> <br>
+        		<%= link_to dish.dish_name, restaurant_dish_path(dish.restaurant_id, dish)  %>
+        		<br>
+        		<%= dish.dish_description %>
+        		<br>
+        		<%= dish.dish_price  %>
+        	</div>
+        <% end %>
+    </div>
+
+<!-- 	<ul>
+	<li>
+	<%#= link_to dish.dish_name, restaurant_dish_path(dish.restaurant_id, dish)  %>
+
+	<%#= link_to dish.dish_photo, restaurant_dish_path(dish.restaurant_id, dish)  %>
+	</li>
+	</ul> -->
+<%end%>
+</div>
