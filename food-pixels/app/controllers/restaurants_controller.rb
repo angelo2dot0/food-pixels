@@ -8,7 +8,8 @@ class RestaurantsController < ApplicationController
 		restaurant_params = params.require(:restaurant).permit(:restaurant_name, :restaurant_address, :restaurant_phone, :restaurant_website)
 		@restaurant = Restaurant.create(restaurant_params)
 		# redirect_to user_restaurants(@user.id)
-    	redirect_to "/users/#{@user.id}/restaurants"
+    	#redirect_to "/users/#{@user.id}/restaurants"
+    	redirect_to "/restaurants"
 	end
 	def new
 		@restaurant = Restaurant.new
