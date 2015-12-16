@@ -23357,3 +23357,83 @@ Processing by RestaurantsController#show as HTML
   [1m[35mDish Load (0.2ms)[0m  SELECT "dishes".* FROM "dishes" WHERE "dishes"."restaurant_id" = $1  [["restaurant_id", 2]]
   Rendered restaurants/show.html.erb within layouts/application (2.0ms)
 Completed 200 OK in 91ms (Views: 88.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurants/2" for ::1 at 2015-12-16 14:06:14 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (58.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mRestaurant Load (0.9ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mDish Load (28.1ms)[0m  [1mSELECT "dishes".* FROM "dishes" WHERE "dishes"."restaurant_id" = $1[0m  [["restaurant_id", 2]]
+  Rendered restaurants/show.html.erb within layouts/application (100.9ms)
+Completed 200 OK in 802ms (Views: 548.2ms | ActiveRecord: 145.8ms)
+
+
+Started GET "/assets/twitter/bootstrap.self-d7e1376b07cabe69dbc6b3b78a5babda2587322b97ddb51cc284347e18d6eb0b.css?body=1" for ::1 at 2015-12-16 14:06:16 -0800
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 14:06:16 -0800
+
+
+Started GET "/assets/dishes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 14:06:16 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 14:06:16 -0800
+
+
+Started GET "/assets/restaurants.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 14:06:16 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-16 14:06:16 -0800
+
+
+Started GET "/assets/application.self-d7d72859b372fe585f0fddb761d9714dff722f3af8c5cfcaab3e643c0535b69b.css?body=1" for ::1 at 2015-12-16 14:06:16 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-16 14:06:16 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-16 14:06:16 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-16 14:06:16 -0800
+
+
+Started GET "/assets/dishes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 14:06:16 -0800
+
+
+Started GET "/assets/restaurants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 14:06:16 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 14:06:16 -0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 14:06:16 -0800
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-16 14:06:16 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-16 14:06:16 -0800
+
+
+Started GET "/" for ::1 at 2015-12-16 14:06:18 -0800
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 112ms (Views: 111.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants" for ::1 at 2015-12-16 14:06:19 -0800
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (0.4ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  Rendered restaurants/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 130ms (Views: 128.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurants/4" for ::1 at 2015-12-16 14:06:21 -0800
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mDish Load (0.3ms)[0m  SELECT "dishes".* FROM "dishes" WHERE "dishes"."restaurant_id" = $1  [["restaurant_id", 4]]
+  Rendered restaurants/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 74ms (Views: 72.3ms | ActiveRecord: 0.7ms)
