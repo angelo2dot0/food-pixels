@@ -23437,3 +23437,52 @@ Processing by RestaurantsController#show as HTML
   [1m[35mDish Load (0.3ms)[0m  SELECT "dishes".* FROM "dishes" WHERE "dishes"."restaurant_id" = $1  [["restaurant_id", 4]]
   Rendered restaurants/show.html.erb within layouts/application (2.2ms)
 Completed 200 OK in 74ms (Views: 72.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/restaurants" for ::1 at 2015-12-16 15:02:47 -0800
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.4ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 75ms (Views: 73.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for ::1 at 2015-12-16 15:02:48 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (60.2ms)
+Completed 200 OK in 157ms (Views: 145.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/sign_in" for ::1 at 2015-12-16 15:02:49 -0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 88ms (Views: 87.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants" for ::1 at 2015-12-16 15:02:50 -0800
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (0.4ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  Rendered restaurants/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 85ms (Views: 84.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurants/2" for ::1 at 2015-12-16 15:18:09 -0800
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mDish Load (0.4ms)[0m  SELECT "dishes".* FROM "dishes" WHERE "dishes"."restaurant_id" = $1  [["restaurant_id", 2]]
+  Rendered restaurants/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 78ms (Views: 75.7ms | ActiveRecord: 0.9ms)
+  [1m[36mDish Load (0.7ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  [1m[36mDish Load (0.8ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+
+
+Started GET "/users/new" for ::1 at 2015-12-16 15:27:09 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 265ms (Views: 263.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for ::1 at 2015-12-16 15:27:12 -0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 127ms (Views: 126.6ms | ActiveRecord: 0.0ms)
