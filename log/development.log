@@ -23486,3 +23486,10 @@ Started GET "/sign_in" for ::1 at 2015-12-16 15:27:12 -0800
 Processing by SessionsController#new as HTML
   Rendered sessions/new.html.erb within layouts/application (0.8ms)
 Completed 200 OK in 127ms (Views: 126.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants" for ::1 at 2015-12-16 16:18:24 -0800
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.7ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 381ms (Views: 379.0ms | ActiveRecord: 0.7ms)
