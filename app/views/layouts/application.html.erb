@@ -25,12 +25,12 @@
 	        <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
 	        <li><a href="/users/new">Sign Up</a></li>
 			<li><a href="/restaurants">Restaurants</a></li>
-			<% if @current_user %>
-			<li><%= link_to "Logout", logout_path, method: :delete%></li>
-			<li><a href="/restaurants/new">Add New Restaurant</a></li>
+			<% if current_user %>
+				<li><%= link_to "Logout", logout_path(current_user), method: :delete%></li>
+				<li><a href="/restaurants/new">Add New Restaurant</a></li>
 
 			<% else %>
-	        <li><a href="/sign_in">Login</a></li>
+	        	<li><a href="/sign_in">Login</a></li>
 			<% end %>
 			
 	      </ul>

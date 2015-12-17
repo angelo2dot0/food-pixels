@@ -4,8 +4,9 @@ class RestaurantsController < ApplicationController
 		render :index
 	end
 	def create
-		@user = current_user
-		restaurant_params = params.require(:restaurant).permit(:restaurant_name, :restaurant_address, :restaurant_phone, :restaurant_website)
+		# @user = current_user
+		restaurant_params = params.require(:restaurant).permit(:restaurant_name, :restaurant_address, :restaurant_phone, :restaurant_website, :user_id)
+		p restaurant_params
 		@restaurant = Restaurant.create(restaurant_params)
 		# redirect_to user_restaurants(@user.id)
     	#redirect_to "/users/#{@user.id}/restaurants"
