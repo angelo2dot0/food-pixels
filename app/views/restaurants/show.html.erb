@@ -1,6 +1,6 @@
-<h1>Welcome to Restaurant Show Page.</h1>
+<h1>Welcome to Food Pixels App's Individual Restaurant Page.</h1>
 
-This is the show page for a single restaurant, that belongs to a single user (restaurant manager).
+This is the page for the individual restaurant listed below:
 
 <br>
 <br>
@@ -14,11 +14,15 @@ This is the show page for a single restaurant, that belongs to a single user (re
 <br>
 <br>
 <% if current_user %>
+    To add new dishes, restaurant managers must be logged in, and then click the Add New Dish button below.
+    <br>
+    <br>
     <%= link_to 'Add New Dish', new_restaurant_dish_path(@restaurant), class: 'btn btn-default' %>
 <% end %>
 
 <div>
-These are the dishes: 
+<br>
+These are the dishes currently listed for the above restaurant: 
 
 <% @restaurant.dishes.each_slice(3) do |three_dishes|  %>
 

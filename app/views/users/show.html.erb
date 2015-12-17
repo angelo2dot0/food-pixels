@@ -1,7 +1,10 @@
 <div>
-  Welcome, <%= @user.first_name %> 
-  </br>
-  This is the show page for a single user (a restaurant manager)
+  Welcome to the Food Pixels App, <%= @user.first_name %>.
+  <br>
+  <br>
+  You are now logged in, to logout, you may either click the Logout link below, or above in the navigation bar.
+  <br>
+  <br>
   <%= link_to "Logout", logout_path, method: :delete%>
 
 </div>
