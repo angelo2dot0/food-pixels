@@ -15,8 +15,7 @@ This is the show page for a single restaurant, that belongs to a single user (re
 <br>
 
 <div class="row">
-    <% restaurant = Restaurant.find(params[:restaurant_id]) %>
-    <%= link_to "Add New Dish", new_restuarant_dish_path, method: :get %>
+    <%= link_to "Add New Dish", new_restaurant_dish_path, method: :get %>
 </div>
 
 <div>
