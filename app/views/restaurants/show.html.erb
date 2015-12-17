@@ -13,8 +13,9 @@ This is the show page for a single restaurant, that belongs to a single user (re
 <%= @restaurant.restaurant_website %>
 <br>
 <br>
-
-<%= link_to 'Add New Dish', new_restaurant_dish_path(@restaurant), class: 'btn btn-default' %>
+<% if current_user %>
+    <%= link_to 'Add New Dish', new_restaurant_dish_path(@restaurant), class: 'btn btn-default' %>
+<% end %>
 
 <div>
 These are the dishes: 
