@@ -28,6 +28,7 @@
 			<% if @current_user %>
 			<li><%= link_to "Logout", logout_path, method: :delete%></li>
 			<li><a href="/restaurants/new">Add New Restaurant</a></li>
+
 			<% else %>
 	        <li><a href="/sign_in">Login</a></li>
 			<% end %>
