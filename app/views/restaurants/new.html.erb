@@ -19,5 +19,5 @@ Add New Restaurant Form:
     <%= f.text_field :restaurant_website, placeholder: "Restaurant Website" %>
     <%= f.hidden_field :user_id, :value => current_user.id %>
   </div>
-  <%= f.submit "Add New Restaurant" %>
+  <%= f.submit "Add New Restaurant", :class => "button" %>
 <% end %>
