@@ -8,16 +8,16 @@ Add New Dish Form:
 
 <%= form_for @dish, url: restaurant_dishes_path, method: "post" do |f| %>
   <div>
-    <%= f.text_field :dish_name, placeholder: "Dish Name" %>
+    <%= f.text_field :dish_name, placeholder: "Dish Name", :class => "input" %>
   </div>
   <div>
-    <%= f.text_field :dish_photo, placeholder: "Dish Photo" %>
+    <%= f.text_field :dish_photo, placeholder: "Dish Photo", :class => "input" %>
   </div>
   <div>
-    <%= f.text_field :dish_description, placeholder: "Dish Description" %>
+    <%= f.text_field :dish_description, placeholder: "Dish Description", :class => "input" %>
   </div>
   <div>
-    <%= f.text_field :dish_price, placeholder: "Dish Price" %>
+    <%= f.text_field :dish_price, placeholder: "Dish Price", :class => "input" %>
   </div>
   <%= f.submit "Add New Dish", :class => "button" %>
 <% end %>

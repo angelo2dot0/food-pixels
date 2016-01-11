@@ -7,16 +7,16 @@ Add New Restaurant Form:
 
 <%= form_for @restaurant, url: restaurants_path, method: "post" do |f| %>
   <div>
-    <%= f.text_field :restaurant_name, placeholder: "Restaurant Name" %>
+    <%= f.text_field :restaurant_name, placeholder: "Restaurant Name", :class => "input" %>
   </div>
   <div>
-    <%= f.text_field :restaurant_address, placeholder: "Restaurant Address" %>
+    <%= f.text_field :restaurant_address, placeholder: "Restaurant Address", :class => "input" %>
   </div>
   <div>
-    <%= f.text_field :restaurant_phone, placeholder: "Restaurant Phone" %>
+    <%= f.text_field :restaurant_phone, placeholder: "Restaurant Phone", :class => "input" %>
   </div>
   <div>
-    <%= f.text_field :restaurant_website, placeholder: "Restaurant Website" %>
+    <%= f.text_field :restaurant_website, placeholder: "Restaurant Website", :class => "input" %>
     <%= f.hidden_field :user_id, :value => current_user.id %>
   </div>
   <%= f.submit "Add New Restaurant", :class => "button" %>
