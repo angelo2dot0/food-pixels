@@ -97,3 +97,18 @@ img {
     border: 4px ridge #404040;
     border-radius: 10px;
 }
+
+.RestList ul {
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid #ddd;
+}
+
+.RestList ul li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.RestList ul li:last-child {
+    border-bottom: none
+}

@@ -1,13 +1,13 @@
 <h1>Welcome to Food Pixels App's Directory of Restaurants.</h1>
 
-<div>
-We currently have the <%= @restaurants.length %> restaurants listed below:
-<br>
-<br>
-<ul> <% @restaurants.each do |restaurant|  %>
-<li> <%= link_to restaurant.restaurant_name, restaurant_path(restaurant)  %> </li>
-<%end%>
-</ul>
+<div class="RestList">
+	We currently have the <%= @restaurants.length %> restaurants listed below:
+	<br>
+	<br>
+	<ul> <% @restaurants.each do |restaurant|  %>
+		<li> <%= link_to restaurant.restaurant_name, restaurant_path(restaurant)  %> </li>
+		<%end%>
+	</ul>
 </div>
 <br>
 To add new restaurants, restaurant managers must sign up and / or login through the above links in the navigation bar.
